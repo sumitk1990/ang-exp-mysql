@@ -1,0 +1,99 @@
+{  
+      "content":{  
+         "tooltips":{  
+
+         },
+         "helpCards":{  
+
+         },
+         "help":{  
+            "Need_Help":{  
+               "refId":"Need_Help",
+               "content":"<ul><li>Find out how to <a href=\"https://www.linkedin.com/in/puneetshekhar/\" target=\"_blank\" title=\"Find out how to contact us\">contact us</a>.</li></ul>",
+               "header":"Need more help?",
+               "display":"",
+               "displayOrder":1,
+               "linkText":"Need help?",
+               "linkNumber":1
+            }
+         },
+         "snippets":{  
+            "ack_labelP2":{  
+               "refId":"ack_labelP2",
+               "content":"<p>may affect apllication experience.</p>",
+               "header":null,
+               "display":null,
+               "displayOrder":0,
+               "linkText":null,
+               "linkNumber":0
+            },
+            "warn_nonrec_versionP1":{  
+               "refId":"warn_nonrec_versionP1",
+               "content":"<p class=\"margin-left-40px\">Your version of</p>",
+               "header":null,
+               "display":null,
+               "displayOrder":0,
+               "linkText":null,
+               "linkNumber":0
+            },
+            "warn_nonrec_versionP2":{  
+               "refId":"warn_nonrec_versionP2",
+               "content":"<p>won&#39;t give you the best application experience.</p>",
+               "header":null,
+               "display":null,
+               "displayOrder":0,
+               "linkText":null,
+               "linkNumber":0
+            },
+            "cookie_OneTime":{  
+               "refId":"cookie_OneTime",
+               "content":"<h3>Our updated cookies policy &ndash; you&#39;ll only see this message once.</h3><p>We uses cookies and similar technologies on this website.</p><p>They help us to know a little bit about you and how you use our website. This helps us improve security, your browsing experience and our marketing to you and others. Cookies are stored locally on your computer or mobile device. </p>",
+               "header":null,
+               "display":null,
+               "displayOrder":0,
+               "linkText":null,
+               "linkNumber":0
+            },
+            "warn_nonrec_versionP3":{  
+               "refId":"warn_nonrec_versionP3",
+               "content":"<p class=\"margin-left-40px\">You can continue to the application, but we recommend installing a more recent version of your browser first. See our <a href=\"https://www.linkedin.com/in/puneetshekhar/\" target=\"_blank\">web browser updates</a> page for more information.</p>",
+               "header":null,
+               "display":null,
+               "displayOrder":0,
+               "linkText":null,
+               "linkNumber":0
+            },
+            "block_unsup_versionP1":{  
+               "refId":"block_unsup_versionP1",
+               "content":"<p class=\"margin-left-40px\">We&#39;re sorry, but application doesn&#39;t support your version of</p>",
+               "header":null,
+               "display":null,
+               "displayOrder":0,
+               "linkText":null,
+               "linkNumber":0
+            },
+            "block_unsup_versionP2":{  
+               "refId":"block_unsup_versionP2",
+               "content":"<p class=\"margin-left-40px\">Please see our &lsquo;Web browser updates&rsquo; page for download links for browsers we do support.</p><p class=\"margin-left-40px\">&nbsp;<a class=\"btn btn-secondary margin-top-20px\" href=\"https://www.linkedin.com/in/puneetshekhar/\">Back to homepage</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class=\"btn btn-primary margin-top-20px\" href=\"https://www.linkedin.com/in/puneetshekhar/\" target=\"_blank\">Web browser updates</a></p><p>&nbsp;</p>",
+               "header":null,
+               "display":null,
+               "displayOrder":0,
+               "linkText":null,
+               "linkNumber":0
+            },
+            "ack_labelP1":{  
+               "refId":"ack_labelP1",
+               "content":"<p>I understand that my version of</p>",
+               "header":null,
+               "display":null,
+               "displayOrder":0,
+               "linkText":null,
+               "linkNumber":0
+            }
+         },
+         "helpCardLinks":{  
+
+         }
+   },
+   "currentTimeStamp":1509277322951
+}

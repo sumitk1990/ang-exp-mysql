@@ -1,0 +1,95 @@
+<!-- http://teknosains.com/i/simple-crud-nodejs-mysql -->
+<div class="jumbotron" ng-controller="loginCtrl"
+	data-ng-init="preInitialize()">
+	<div ng-if="!isAuthenticated">
+		<form class="form-horizontal" role="form" ng-if="loginFormView">
+			<h2 class="form-signin-heading">Please login</h2>
+			<input type="text" class="form-control" name="username" id="username"
+				ng-model="loginData.username" placeholder="Username" ng= /> <input
+				type="password" class="form-control" name="password" id="password"
+				placeholder="Password" ng-model="loginData.password" />
+			<div class="checkbox">
+				<label> <input type="checkbox" value="remember-me">
+					Remember me
+				</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block"
+				ng-click="loginSubmit()">Login</button>
+			<a style="cursor: pointer;" ng-click="toggleLoginRegisterForm()">Register
+				Me</a>
+
+		</form>
+
+		<form class="form-horizontal" role="form" ng-if="!loginFormView">
+			<div>
+				<button g-login type="button">Google</button>
+<!-- 				<button linked-in type="button">LinkedIn</button> -->
+				<button fb-login type="button">facebook</button>
+				<!-- <button ng-click="signout()" type="button">signout</button> -->
+				<h4>result: {{result | json}}</h4>
+			</div>
+			<h2 class="form-signin-heading">Please register yourself</h2>
+			<div class="col-md-6 form-group">
+				<input type="text" class="form-control" name="firstName"
+					id="firstName" ng-model="registerData.firstName"
+					placeholder="Fisrt Name" />
+			</div>
+			<div class="col-md-6 form-group">
+				<input type="text" class="form-control" name="lastName"
+					id="lastName" ng-model="registerData.lastName"
+					placeholder="Last Name" />
+			</div>
+			<div class="col-md-6 form-group">
+				<input type="email" class="form-control" name="email" id="email"
+					placeholder="email" ng-model="registerData.email" />
+			</div>
+			<div class="col-md-6 form-group">
+				<input type="email" class="form-control" name="cnfEmail"
+					id="cnfEmail" placeholder="Confirm email"
+					ng-model="registerData.cnfEmail" />
+			</div>
+			<div class="col-md-6 form-group">
+				<input type="password" class="form-control" name="password"
+					id="password" placeholder="password"
+					ng-model="registerData.password" />
+			</div>
+			<div class="col-md-6 form-group">
+				<input type="password" class="form-control" name="cnfPassword"
+					id="cnfPassword" placeholder="Confirm password"
+					ng-model="registerData.cnfPassword" />
+			</div>
+			<div class="col-md-6 form-group">
+				<a style="cursor: pointer;" ng-click="toggleLoginRegisterForm()">Already
+					have account</a>
+			</div>
+			<button class="btn btn-primary" ng-click="registerSubmit()">Register</button>
+		</form>
+	</div>
+	<div ng-if="isAuthenticated">
+		<form class="form-horizontal" role="form" ng-if="loginFormView">
+			<h2 class="form-signin-heading">Please log out</h2>
+			<button class="btn btn-lg btn-primary btn-block" ng-click="logout()">log
+				out</button>
+		</form>
+	</div>
+	<!--  <form class="form-horizontal" role="form" ng-if="loginFormView">
+		<h2 class="form-signin-heading">Please login</h2>
+		<div class="col-md-12 form-group">
+			<input type="text" class="form-control" name="username" id="username"
+				ng-model="loginData.username" placeholder="email" />
+		</div>
+		<div class="col-md-12 form-group">
+			<input type="password" class="form-control" name="password"
+				id="password" placeholder="Password" ng-model="loginData.password" />
+		</div>
+		<div class="checkbox">
+			<label> <input type="checkbox" value="remember-me">
+				Remember me
+			</label>
+		</div>
+		<button class="btn btn-lg btn-primary btn-block"
+			ng-click="loginSubmit()">Login</button>
+		<a style="cursor: pointer;" ng-click="toggleLoginRegisterForm()">Register
+			Me</a>
+	</form>  -->
+</div>

@@ -1,0 +1,63 @@
+{
+	"content": {
+		"tooltips": {
+			
+		},
+		"helpCards": {
+			
+		},
+		"help": {
+			"Need_Help": {
+				"refId": "Need_Help",
+				"content": "<ul><li>Find out who we are at <a href=\"https://www.linkedin.com/in/puneetshekhar/\" target=\"_blank\" title=\"Find out how to contact us\">contact us</a>.</li></ul>",
+				"header": "Need help?",
+				"display": "",
+				"displayOrder": 1,
+				"linkText": "Need more help?",
+				"linkNumber": 1
+			}
+		},
+		"snippets": {
+			"GETTING_STARTED_CONTENT": {
+				"refId": "GETTING_STARTED_CONTENT",
+				"content": "<img src=\"images/logo.jpg\" alt=\"Logo\"><p>Please visit on About menu link for complete demonstration.</p>",
+				"header": "<p class=\"lead\">This image and complete page texts are coming as runtime content. It can be changed by no time.</P>",
+				"display": null,
+				"displayOrder": 0,
+				"linkText": null,
+				"linkNumber": 0
+			},
+			"HEADER_HOME": {
+				"refId": "HEADER_HOME",
+				"content": "<h4 class=\"row marketing\">Welcome to the demo app.</h4>",
+				"header": null,
+				"display": null,
+				"displayOrder": 0,
+				"linkText": null,
+				"linkNumber": 0
+			},
+			"SESSION_TABLE_DESC": {
+				"refId": "SESSION_TABLE_DESC",
+				"content": "<p>If you have been logged in to the application then active session will be shown here with timestamp.</p>",
+				"header": null,
+				"display": null,
+				"displayOrder": 0,
+				"linkText": null,
+				"linkNumber": 0
+			},
+			"APPLICATION_SPECS": {
+				"refId": "APPLICATION_SPECS",
+				"content": "<h4>Angular-Fullstack Application contains</h4><ul><li>AngularJs</li><li>Bootstrap</li><li>i18n</li><li>Express</li><li>File revving</li><li>My sql</li></ul>",
+				"header": null,
+				"display": null,
+				"displayOrder": 0,
+				"linkText": null,
+				"linkNumber": 0
+			}
+		},
+		"helpCardLinks": {
+			
+		}
+	},
+	"currentTimeStamp": 1509277324482
+}

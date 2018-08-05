@@ -1,0 +1,124 @@
+'use strict';
+
+var express = require('express'),
+	multipleViews = require('express-multiple-views'),
+	path = require('path');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var session      = require('express-session');
+var compression = require('compression');
+var livereload  = require("connect-livereload");
+
+
+/*
+var http = require('http')
+var favicon = require('serve-favicon')
+var logger = require('morgan')
+var methodOverride = require('method-override')
+var multer = require('multer')
+var errorHandler = require('errorhandler')
+*/
+
+var securityProfile= require('./../mock/securityProfile.js');
+
+var serverConfig = {
+	'env' : 'development'
+}
+
+module.exports = function(app) {
+	var rootPath = path.normalize(__dirname + '/../..');
+
+	console.log("\t----------rootPath--------------\n\t", rootPath);
+	serverConfig.env = serverConfig.env ? serverConfig.env : 'development';
+
+	
+	
+	app.use(function checkAuth(req, res, next) {
+		
+//		console.log(" req.originalUrl -----------------------", req.originalUrl);
+		
+			  checkAuthentication(req, res, next);
+
+		/*if (req.url === '/secure' && (!req.session || !req.session.authenticated)) {
+			res.render('unauthorised', { status: 403 });
+			return;
+		}*/
+
+//		console.log("Page Check -----------------------", req.originalUrl);
+//		console.log("SESSION CHECK IN EXPRESS CONFIGURATION -----------------------", req.session,"\n sessionID : ",req.sessionID);
+		if (req.url.indexOf('/src/about/About.html') === 0) {
+			console.log("About Page Check -----------------------", req.originalUrl);
+			
+			console.log(' securityProfile -------- ',securityProfile);
+
+			//			res.send('You are not authorized for this action.');
+			res.send('<div class="jumbotron">'
+				+ '<h3>"Error !!! Not found ...!"</h3>'
+				+ '<p class="lead">'
+				+ '<p>Sorry, but the page you were trying to view does not exist.</p>'
+				+ '<p>It looks like this was the result of either:</p>'
+				+ '<ul>'
+				+ '<li>a mistyped address</li>'
+				+ '<li>an out-of-date link</li>'
+				+ '<li>You are not authorized for this action.</li>'
+				+ '</ul>'
+				+ '<p>'
+				+ '	<a class="btn btn-lg btn-success" ui-sref="home">HOME! &nbsp;'
+				+ '<span	class="glyphicon glyphicon-ok"></span></a>'
+				+ '</p>'
+				+ '</div>');
+			return;
+		}
+		next();
+	});
+
+	// Disable caching of scripts for easier testing
+	app.use(function noCache(req, res, next) {
+		if (req.url.indexOf('/scripts/') === 0) {
+			res.header("Cache-Control", "no-cache, no-store, must-revalidate");
+			res.header("Pragma", "no-cache");
+			res.header("Expires", 0);
+		}
+		next();
+	});
+
+	/**
+	 * Then you can config the livereload
+	 */
+//	app.use(livereload());
+	
+//	app.use(express.static(path.join(rootPath, '.tmp')));
+	app.use(express.static(path.join(rootPath, '/app')));
+	
+	/*app.use('/', express.static(rootPath + '/app'));
+	app.use('/src', express.static(rootPath + '/app/src'));
+	app.use('/styles', express.static(rootPath + '/app/styles'));
+	app.use('/scripts', express.static(rootPath + '/app/scripts'));
+	app.use('/bower_components', express.static(rootPath + '/app/bower_components'));*/
+	
+	app.use(compression());
+	//      app.use(checkAuthentication);
+	app.set('views', rootPath + '/app/src');
+	multipleViews(app, rootPath + '/app/src');
+	app.use(bodyParser.json());
+	app.use(session({resave: true, saveUninitialized: true, secret: 'SOMERANDOMSECRETHERE', cookie: { maxAge: 60000 }}));
+	app.engine('html', require('ejs').renderFile);
+	app.set('view engine', 'html');
+
+};
+
+
+function checkAuthentication(req, res) {
+	var stripped = req.url.split('.')[0];
+	var requestedView = path.join('./', stripped);
+
+	console.log('------ REQUESTED URL ------', req.url);
+	//	console.log('------ stripped URL ------',stripped);
+	//	console.log('------ requestedView URL ------',stripped);
+	/*if (req.url.indexOf('/src/about/About.html') === 0) {
+		res.render('404');
+		return;
+	}*/
+
+//	next();
+}

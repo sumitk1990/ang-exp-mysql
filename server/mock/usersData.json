@@ -1,0 +1,29 @@
+{
+	"data": [{
+		"name": "Admin",
+		"userName": "admin@mail.com",
+		"password": "admin@123",
+		"securityProfile": ["ADMIN"],
+		"relations": {
+
+		},
+		"methods": [],
+		"signature": "node"
+	}, {
+		"name": "Student",
+		"userName": "student@mail.com",
+		"password": "student@123",
+		"securityProfile": ["HOME","CONTACT"],
+		"relations": {},
+		"methods": [],
+		"signature": "node"
+	}, {
+		"name": "Teacher",
+		"userName": "teacher@mail.com",
+		"password": "teacher@123",
+		"securityProfile": ["ABOUT"],
+		"relations": {},
+		"methods": [],
+		"signature": "node"
+	}]
+}

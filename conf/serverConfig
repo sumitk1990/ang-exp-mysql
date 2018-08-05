@@ -1,0 +1,13 @@
+{
+  "env":"development",
+  "appPort":3005,
+  "mysql":{
+  	"host": "localhost",
+  	"port": "3306",
+  	"username": "root",
+  	"password": "123456",
+  	"database": "angwebapp",
+  	"debug": false
+  }
+}
+

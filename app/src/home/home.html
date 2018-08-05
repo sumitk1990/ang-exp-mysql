@@ -1,0 +1,45 @@
+<div ng-controller="homeCtrl" data-ng-init="preInitialize()">
+	<div
+		ng-bind-html="homeContent.snippets.HEADER_HOME.content | bindContentData">
+	</div>
+	<!-- <div class="jumbotron">
+		<h3>{{'HOME_SUMMARY_SCREEN' | translate}}</h3>
+		<p class="lead">
+			<img src="images/logo.jpg" alt="I'm Yeoman"><br/>
+			{{'WELCOME_MESSAGE' | translate}}
+		</p>
+	</div> -->
+	<div class="jumbotron">
+		<div
+			ng-bind-html="homeContent.snippets.GETTING_STARTED_CONTENT.header | bindContentData"></div>
+		<p
+			ng-bind-html="homeContent.snippets.GETTING_STARTED_CONTENT.content | bindContentData">
+
+		</p>
+	</div>
+
+	<div class="table-responsive">
+		<div
+			ng-bind-html="homeContent.snippets.SESSION_TABLE_DESC.content | bindContentData">
+		</div>
+		<table
+			class="table table-condensed table-striped table-bordered table-hover no-margin">
+			<thead>
+				<tr>
+					<th style="width: 45%" class="hidden-phone">Session</th>
+					<th style="width: 400%">Expires</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="session in sessions">
+					<td class="hidden-phone">{{session.session_id}}</td>
+					<td><span class="name">{{session.expires}}</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="row marketing"
+		ng-bind-html="homeContent.snippets.APPLICATION_SPECS.content | bindContentData">
+	</div>
+</div>

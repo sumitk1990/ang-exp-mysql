@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title>AngWebApp</title>
+<meta name="description" content="">
+
+<!-- build:css(.tmp) styles/main.css -->
+<link rel="stylesheet" href="./styles/main.css">
+<!-- endbuild -->
+
+</head>
+<body ng-app="AngWebApp">
+	<!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+	<!-- Add your site or application content here -->
+	<div class="container">
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
+				<li><a ui-sref="home">Home</a></li>
+				<li><a ui-sref="about">About</a></li>
+				<li><a ui-sref="contact">Contact</a></li>
+				<li><a ui-sref="user">User</a></li>
+				<li><a ui-sref="login">Login</a></li>
+				<li><a ui-sref="admin">Admin</a></li>
+			</ul>
+			<h3 class="text-muted">{{'TITLE' | translate}}</h3>
+		</div>
+		<!--     <div ng-view=""></div> -->
+		<div ui-view=""></div>
+
+		<div class="footer">
+			<p>
+				<span class="glyphicon glyphicon-heart"></span> from the Puneet Shekhar
+			</p>
+		</div>
+	</div>
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	
+		ga('create', 'UA-XXXXX-X');
+		ga('send', 'pageview');
+	</script>
+
+	<!-- build:js(.) scripts/oldieshim.js -->
+	<!--[if lt IE 9]>
+  <script src="bower_components/es5-shim/es5-shim.js"></script>
+  <script src="bower_components/json3/lib/json3.js"></script>
+  <![endif]-->
+	<!-- endbuild -->
+
+	<!-- /Start your project here-->
+
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script type="text/javascript"
+		src="bower_components/jquery/dist/jquery.min.js"></script>
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script
+		src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script type="text/javascript"
+		src="bower_components/angular-translate/angular-translate.min.js"></script>
+	<script src="bower_components/moment/moment.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="bower_components/angularjs-social-login/angularjs-social-login.js"></script>
+	
+
+
+	<script src="scripts/app.js"></script>
+	<!-- <script type="text/javascript" src="scripts/i18n/language.js"></script> -->
+	<script src="scripts/routes.js"></script>
+	<script type="text/javascript" src="scripts/services/serviceConfig.js"></script>
+	<script type="text/javascript" src="scripts/services/appService.js"></script>
+	<script src="src/login/loginCtrl.js"></script>
+	<script src="src/home/homeCtrl.js"></script>
+	<script src="src/about/aboutCtrl.js"></script>
+	<script src="src/contact/contactCtrl.js"></script>
+	<script src="src/user/userCtrl.js"></script>
+	<script src="src/admin/adminCtrl.js"></script>
+
+	<!-- <script src="https://apis.google.com/js/plus.js?onload=init"></script> -->
+
+</body>
+</html>

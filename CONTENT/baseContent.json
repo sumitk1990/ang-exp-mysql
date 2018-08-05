@@ -1,0 +1,54 @@
+{
+	"content": {
+		"tooltips": {
+			
+		},
+		"helpCards": {
+			
+		},
+		"help": {
+			"Need_Help": {
+				"refId": "Need_Help",
+				"content": "<ul><li>Find out how to <a href=\"https://www.linkedin.com/in/puneetshekhar/\" target=\"_blank\" title=\"Find out how to contact us\">contact us</a>.</li></ul>",
+				"header": "Need help?",
+				"display": "",
+				"displayOrder": 1,
+				"linkText": "Need help?",
+				"linkNumber": 1
+			}
+		},
+		"snippets": {
+			"APP_TITLE": {
+				"refId": "APP_TITLE",
+				"content": "Angular App",
+				"header": null,
+				"display": null,
+				"displayOrder": 0,
+				"linkText": null,
+				"linkNumber": 0
+			},
+			"APP_FOOTER_1": {
+				"refId": "APP_FOOTER_1",
+				"content": "<p><span class=\"glyphicon glyphicon-heart\"></span> from the Puneet Shekhar</p>",
+				"header": null,
+				"display": null,
+				"displayOrder": 0,
+				"linkText": null,
+				"linkNumber": 0
+			},
+			"APP_FOOTER_2": {
+				"refId": "APP_FOOTER_2",
+				"content": "<P>Copyright &copy; 2016 All rights reserved by <a href=\"https://www.linkedin.com/in/puneetshekhar/\" target=\"_blank\" title=\"title\">site owner</a></p>",
+				"header": null,
+				"display": null,
+				"displayOrder": 0,
+				"linkText": null,
+				"linkNumber": 0
+			}
+		},
+		"helpCardLinks": {
+			
+		}
+	},
+	"currentTimeStamp": 1509277322947
+}
